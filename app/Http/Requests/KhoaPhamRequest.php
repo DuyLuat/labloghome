@@ -25,7 +25,7 @@ class KhoaPhamRequest extends FormRequest
     {
         return [
             'txtmonhoc'=>'required|unique:khoapham,monhoc',
-            'txtgiatien'=>'required',
+            'txtgiatien'=>'required|number',
             'txtgiangvien'=>'required'
         ];
     }
@@ -35,6 +35,7 @@ class KhoaPhamRequest extends FormRequest
             'txtmonhoc.required'=>'Bạn chưa nhập tên môn học',
             'txtmonhoc.unique'=>'Tên môn học đã tồn tại.',
             'txtgiatien.required'=>'Bạn chưa nhập giá tiên',
+            'txtgiatien.number'=>'Giá trị phải là số',
             'txtgiangvien.required'=>'Bạn chưa nhập giảng viên'
         ];
     }
